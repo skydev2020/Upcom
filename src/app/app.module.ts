@@ -19,6 +19,11 @@ const routes = [
     path: '',
     redirectTo: 'dashboard',
     pathMatch: 'full'
+  },
+  {
+    path: 'users',
+    redirectTo: 'users',
+    pathMatch: 'full'
   }
 ];
 
