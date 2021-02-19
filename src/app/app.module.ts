@@ -8,19 +8,27 @@ import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
 import { BioComponent } from './bio/bio.component';
 import {FooConfig} from './foo/foo.config';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { RouterModule } from '@angular/router';
+import { DashboardModule } from './dashboard/dashboard.module';
 // import { FooComponent } from './foo/foo.component';
+
+const routes = [];
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
     BioComponent,
+    // DashboardComponent,
     // FooComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FooModule
+    FooModule,
+    RouterModule.forRoot(routes),
+    DashboardModule    
   ],
   providers: [{
     provide: FooConfig, useValue: {
