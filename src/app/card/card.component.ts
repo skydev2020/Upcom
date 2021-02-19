@@ -9,6 +9,9 @@ export class CardComponent implements OnInit {
   
   constructor() { }
   titleText = 'User Data123';
+  currentYear() {
+    return (new Date()).getFullYear();
+  }
   ngOnInit(): void {
   }
 
