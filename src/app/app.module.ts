@@ -22,8 +22,7 @@ const routes = [
   },
   {
     path: 'users',
-    redirectTo: 'users',
-    pathMatch: 'full'
+    loadChildren: 'app/users/users.module#UsersModule'    
   }
 ];
 
