@@ -17,4 +17,7 @@
 </nav>
 <div app-card><app-bio>Been around for four years.</app-bio></div>
 <app-card><app-bio>Been around for Five years.</app-bio></app-card>
+<app-tab-list>
+  <app-tab *ngFor="let tab of tabs" [tab]="tab"></app-tab>
+</app-tab-list>
 <router-outlet></router-outlet>

@@ -6,12 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
 import { BioComponent } from './bio/bio.component';
+import { TabComponent } from './tab/tab.component';
+import { TabListComponent } from './tab-list/tab-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
-    BioComponent    
+    BioComponent,
+    TabComponent,
+    TabListComponent,
   ],
   imports: [
     BrowserModule,
