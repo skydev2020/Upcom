@@ -7,21 +7,26 @@ import {FooModule } from './foo/foo.module';
 import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
 import { BioComponent } from './bio/bio.component';
-import { FooComponent } from './foo/foo.component';
+import {FooConfig} from './foo/foo.config';
+// import { FooComponent } from './foo/foo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
     BioComponent,
-    FooComponent
+    // FooComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FooModule
   ],
-  providers: [],
+  providers: [{
+    provide: FooConfig, useValue: {
+      prefix: 'Custom Prefix'
+    }
+  }],  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
