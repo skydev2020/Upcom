@@ -11,15 +11,23 @@ import {FooConfig} from './foo/foo.config';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule } from '@angular/router';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { UsersComponent } from './users/users.component';
 // import { FooComponent } from './foo/foo.component';
 
-const routes = [];
+const routes = [
+  {
+    path: '',
+    redirectTo: 'dashboard',
+    pathMatch: 'full'
+  }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
     BioComponent,
+    UsersComponent,
     // DashboardComponent,
     // FooComponent
   ],
